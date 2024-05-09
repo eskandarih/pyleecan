@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
+import sys
+import os
+os.environ['QT_API'] = 'pyside2'
+from qtpy import API_NAME
+print("API_NAME " + API_NAME)
 from qtpy import QtWidgets, QtGui, QtCore
 from matplotlib.backends.backend_qt5agg import (
     FigureCanvas,
 )  # needed for proper exe gen.
 
-import sys
 from os.path import dirname, join, isfile
 from sys import argv, exit
 
